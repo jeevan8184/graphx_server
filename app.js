@@ -24,6 +24,8 @@ const Payment = require("./model/subscripton");
 // Initialize Express app
 const app = express();
 
+app.set('trust proxy', 1); 
+
 // Enhanced security middleware
 app.use(helmet());
 app.use(morgan("dev"));
@@ -294,9 +296,9 @@ app.use(
     }),
     cookie: {
       maxAge: 24 * 60 * 60 * 1000, // 1 day
-      // secure: process.env.NODE_ENV === "production",
-      // httpOnly: true,
-      // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      secure: process.env.NODE_ENV === "production",
+      httpOnly: true,
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     },
   })
 );
