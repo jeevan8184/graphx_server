@@ -1024,7 +1024,7 @@ app.get(
   async (req, res) => {
     try {
       sendLoginNotificationEmail(req.user);
-      const redirectUrl = "http://localhost:5173";
+      const redirectUrl = process.env.FRONTEND_URL;
       res.redirect(`${redirectUrl}/dashboard?login_success=true`);
     } catch (err) {
       console.error("Google callback processing error:", err);

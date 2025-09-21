@@ -1,4 +1,15 @@
 {
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",
@@ -8,6 +19,7 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "express-rate-limit": "^7.5.0",
     "express-session": "^1.18.1",
     "fs": "^0.0.1-security",
@@ -21,5 +33,8 @@
     "passport-local": "^1.0.0",
     "razorpay": "^2.9.6",
     "validator": "^13.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
