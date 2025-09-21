@@ -53,6 +53,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
+
+
 // Initialize Razorpay
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
@@ -292,9 +294,9 @@ app.use(
     }),
     cookie: {
       maxAge: 24 * 60 * 60 * 1000, // 1 day
-      secure: process.env.NODE_ENV === "production",
-      httpOnly: true,
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      // secure: process.env.NODE_ENV === "production",
+      // httpOnly: true,
+      // sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     },
   })
 );
